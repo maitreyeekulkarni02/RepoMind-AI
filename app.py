@@ -20,7 +20,7 @@ def configure_page() -> None:
 
     st.set_page_config(
         page_title=settings.app_name,
-        page_icon="Ã°Å¸Â§Â ",
+        page_icon="🧠",
         layout="wide",
         initial_sidebar_state="expanded",
     )
@@ -34,7 +34,7 @@ def render_sidebar() -> str:
         Selected page.
     """
 
-    st.sidebar.title("Ã°Å¸Â§Â  RepoMind AI")
+    st.sidebar.title("🧠 RepoMind AI")
 
     st.sidebar.caption("Enterprise Repository Intelligence Platform")
 
@@ -62,7 +62,7 @@ def render_dashboard() -> None:
     Render dashboard page.
     """
 
-    st.title("Ã°Å¸Â§Â  RepoMind AI Enterprise")
+    st.title("🧠 RepoMind AI Enterprise")
 
     st.subheader("AI-Powered Software Repository Intelligence")
 
