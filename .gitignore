@@ -1,0 +1,36 @@
+# Virtual environments
+.venv/
+.venv-1/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Vector database / generated AI data
+vectorstore/
+
+# Generated documentation
+# Uncomment if you don't want docs tracked
+# docs/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Aider
+.aider*
