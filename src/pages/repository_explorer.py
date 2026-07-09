@@ -19,19 +19,20 @@ _MOCK_REPOSITORIES_DATA = {
     "repo-1": {
         "id": "repo-1",
         "name": "RepoMind-AI-Example",
-        "path": "data/repos/repomind_ai_example",
-        "status": RepositoryStatus.INDEXED,
-        "type": RepositoryType.GIT,
+        "source": "https://github.com/example/RepoMind-AI-Example",
+        "repository_type": RepositoryType.GIT,
+        "local_path": Path("data/repos/repomind_ai_example"),
+        "status": RepositoryStatus.READY,
     },
     "repo-2": {
         "id": "repo-2",
         "name": "Another-Project",
-        "path": "data/repos/another_project",
-        "status": RepositoryStatus.INDEXED,
-        "type": RepositoryType.GIT,
+        "source": "https://github.com/example/Another-Project",
+        "repository_type": RepositoryType.GIT,
+        "local_path": Path("data/repos/another_project"),
+        "status": RepositoryStatus.READY,
     },
 }
-
 # Convert mock data to Repository objects
 MOCK_REPOSITORIES: Dict[str, Repository] = {
     repo_id: Repository(**data) for repo_id, data in _MOCK_REPOSITORIES_DATA.items()
