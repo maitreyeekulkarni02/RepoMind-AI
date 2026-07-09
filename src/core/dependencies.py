@@ -6,6 +6,8 @@ from src.services.embedding_service import EmbeddingService
 from src.services.retrieval_service import RetrievalService
 from src.services.ai_service import AIService
 from src.services.rag_service import RAGService
+from src.services.repository_service import RepositoryService
+from src.parsers.repository_parser import RepositoryParser
 from src.vectorstore.faiss_store import FAISSVectorStore
 
 
@@ -54,3 +56,12 @@ def get_rag_service() -> RAGService:
     ai_service = get_ai_service()
     logger.info("Initializing RAGService.")
     return RAGService(retrieval_service=retrieval_service, ai_service=ai_service)
+
+
+@lru_cache(maxsize=1)
+def get_repository_service() -> RepositoryService:
+    """
+    Returns a cached instance of RepositoryService.
+    """
+    repository_parser = RepositoryParser()
+    return RepositoryService(parser=repository_parser)
