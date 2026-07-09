@@ -8,6 +8,7 @@ import streamlit as st
 
 from src.core.config import settings
 from src.core.logger import get_logger
+from src.pages import semantic_search
 
 
 logger = get_logger(__name__)
@@ -127,11 +128,10 @@ def main() -> None:
     )
 
     if selected_page == "Dashboard":
-
         render_dashboard()
-
+    elif selected_page == "Semantic Search":
+        semantic_search.render_page()
     else:
-
         render_placeholder(selected_page)
 
 
