@@ -8,7 +8,7 @@ import streamlit as st
 
 from src.core.config import settings
 from src.core.logger import get_logger
-from src.pages import semantic_search
+from src.pages import semantic_search, ai_chat
 
 
 logger = get_logger(__name__)
@@ -131,6 +131,8 @@ def main() -> None:
         render_dashboard()
     elif selected_page == "Semantic Search":
         semantic_search.render_page()
+    elif selected_page == "AI Chat":
+        ai_chat.render_page()
     else:
         render_placeholder(selected_page)
 
